@@ -1,0 +1,11 @@
+services:
+  activity:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: activity-service
+    working_dir: /usr/src/app
+    volumes:
+      - .:/usr/src/app
+    command: ["node", "app.js"]
+    restart: always
